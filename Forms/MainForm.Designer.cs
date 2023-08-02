@@ -104,8 +104,8 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "MainForm";
+            ShowInTaskbar = false;
             Text = "Form1";
-            TopMost = true;
             Load += Form1_Load;
             taskBarMenu.ResumeLayout(false);
             ResumeLayout(false);

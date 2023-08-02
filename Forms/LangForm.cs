@@ -39,7 +39,7 @@ namespace WinFormsApp1
             {
                 langLabel.Text = $"No mapping for {cur} :: {InputLanguage.CurrentInputLanguage.LayoutName} :: {InputLanguage.CurrentInputLanguage.LayoutName}";
             }
-            timeLabel.Text = DateTime.Now.ToString("HH:mm:ss.ffff");
+            timeLabel.Text = DateTime.Now.ToString(config.Timestamp);
         }
 
         static Image ReadImage(string filePath)

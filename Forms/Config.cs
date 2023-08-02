@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,7 @@ namespace WinFormsApp1
 
         public Dictionary<string, string> Mappings { get; set; } = new();
         public Dictionary<string, Language> Languages { get; set; } = new();
+        public string Timestamp { get; set; } = "dd MMM HH:MM:ss.ffff";
 
         public static string ConfigDirectory => ParseDirectory("%DROPBOX%/config");
 
@@ -37,7 +39,8 @@ namespace WinFormsApp1
                 { "RU", new Language { Name = "Русский", Flag = "%DROPBOX%/config/lang/ru.png" } },
                 { "HE", new Language { Name = "עברית", Flag = "%DROPBOX%/config/lang/il.png" } },
                 { "US", new Language { Name = "Проклятая НАТА", Flag = "%DROPBOX%/config/lang/us.png" } },
-            }
+            },
+            Timestamp = "dd MMM HH:mm:ss.fffff"
         };
 
         public static string ParseDirectory(string text)
