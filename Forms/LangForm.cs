@@ -22,23 +22,24 @@ namespace WinFormsApp1
 
         public LangForm(string title) : this()
         {
-            var cur = System.Windows.Forms.InputLanguage.CurrentInputLanguage.Culture.Name;
+            var cur = InputLanguage.CurrentInputLanguage.Culture.Name;
             if (config.Mappings.TryGetValue(cur, out var lang_str))
             {
 
                 if (config.Languages.ContainsKey(lang_str))
                 {
                     var lang = config.Languages[lang_str];
-                    label1.Text = lang.Name;
+                    langLabel.Text = lang.Name;
                     pictureBox1.Image = lang.FlagImage ?? ReadImage(title);
                 }
                 else
-                    label1.Text = $"No language '{lang_str}' ";
+                    langLabel.Text = $"No language '{lang_str}' ";
             }
             else
             {
-                label1.Text = $"No mapping for {cur} :: {InputLanguage.CurrentInputLanguage.LayoutName} :: {InputLanguage.CurrentInputLanguage.LayoutName}";
+                langLabel.Text = $"No mapping for {cur} :: {InputLanguage.CurrentInputLanguage.LayoutName} :: {InputLanguage.CurrentInputLanguage.LayoutName}";
             }
+            timeLabel.Text = DateTime.Now.ToString("HH:mm:ss.ffff");
         }
 
         static Image ReadImage(string filePath)

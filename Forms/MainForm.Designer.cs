@@ -76,22 +76,22 @@
             textBox1.Size = new Size(215, 23);
             textBox1.TabIndex = 3;
             // 
-            // contextMenuStrip1
+            // taskBarMenu
             // 
             taskBarMenu.Items.AddRange(new ToolStripItem[] { showTestFormToolStripMenuItem, exitToolStripMenuItem });
             taskBarMenu.Name = "contextMenuStrip1";
-            taskBarMenu.Size = new Size(181, 70);
+            taskBarMenu.Size = new Size(155, 48);
             // 
             // showTestFormToolStripMenuItem
             // 
             showTestFormToolStripMenuItem.Name = "showTestFormToolStripMenuItem";
-            showTestFormToolStripMenuItem.Size = new Size(180, 22);
+            showTestFormToolStripMenuItem.Size = new Size(154, 22);
             showTestFormToolStripMenuItem.Text = "Show test form";
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(180, 22);
+            exitToolStripMenuItem.Size = new Size(154, 22);
             exitToolStripMenuItem.Text = "Exit";
             // 
             // MainForm
@@ -105,6 +105,7 @@
             Controls.Add(button1);
             Name = "MainForm";
             Text = "Form1";
+            TopMost = true;
             Load += Form1_Load;
             taskBarMenu.ResumeLayout(false);
             ResumeLayout(false);

@@ -1,4 +1,4 @@
-﻿using Language.Properties;
+﻿using Forms.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,20 +21,21 @@ namespace Language
             // Initialize Tray Icon
             trayIcon = new NotifyIcon()
             {
-                Icon = Resources.,
-                ContextMenu = taskbar
-            }),
+                Icon = null,
+                ContextMenuStrip = new ContextMenuStrip(),
                 Visible = true
             };
 
 
-        void Exit(object sender, EventArgs e)
-        {
-            // Hide tray icon, otherwise it will remain shown until user mouses over it
-            trayIcon.Visible = false;
+            void Exit(object sender, EventArgs e)
+            {
+                // Hide tray icon, otherwise it will remain shown until user mouses over it
+                trayIcon.Visible = false;
 
-            Application.Exit();
+                Application.Exit();
+            }
         }
+    
 
         private ContextMenuStrip taskBarMenu;
         private ToolStripMenuItem showTestFormToolStripMenuItem;
