@@ -13,14 +13,14 @@ using System.Windows.Forms;
 
 namespace WinFormsApp1
 {
-    public partial class FlagForm : Form
+    public partial class LangForm : Form
     {
-        public FlagForm()
+        public LangForm()
         {
             InitializeComponent();
         }
 
-        public FlagForm(string title) : this()
+        public LangForm(string title) : this()
         {
             var cur = System.Windows.Forms.InputLanguage.CurrentInputLanguage.Culture.Name;
             if (config.Mappings.TryGetValue(cur, out var lang_str))

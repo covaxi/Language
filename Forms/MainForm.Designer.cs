@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
             textBox1 = new TextBox();
+            taskBarMenu = new ContextMenuStrip(components);
+            showTestFormToolStripMenuItem = new ToolStripMenuItem();
+            exitToolStripMenuItem = new ToolStripMenuItem();
+            taskBarMenu.SuspendLayout();
             SuspendLayout();
             // 
             // button1
@@ -40,7 +45,7 @@
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 0;
-            button1.Text = "IL";
+            button1.Text = "Current";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -66,10 +71,28 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(171, 42);
+            textBox1.Location = new Point(171, 13);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
+            textBox1.Size = new Size(215, 23);
             textBox1.TabIndex = 3;
+            // 
+            // contextMenuStrip1
+            // 
+            taskBarMenu.Items.AddRange(new ToolStripItem[] { showTestFormToolStripMenuItem, exitToolStripMenuItem });
+            taskBarMenu.Name = "contextMenuStrip1";
+            taskBarMenu.Size = new Size(181, 70);
+            // 
+            // showTestFormToolStripMenuItem
+            // 
+            showTestFormToolStripMenuItem.Name = "showTestFormToolStripMenuItem";
+            showTestFormToolStripMenuItem.Size = new Size(180, 22);
+            showTestFormToolStripMenuItem.Text = "Show test form";
+            // 
+            // exitToolStripMenuItem
+            // 
+            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            exitToolStripMenuItem.Size = new Size(180, 22);
+            exitToolStripMenuItem.Text = "Exit";
             // 
             // MainForm
             // 
@@ -83,6 +106,7 @@
             Name = "MainForm";
             Text = "Form1";
             Load += Form1_Load;
+            taskBarMenu.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -93,5 +117,8 @@
         private Button button2;
         private Button button3;
         private TextBox textBox1;
+        private ContextMenuStrip taskBarMenu;
+        private ToolStripMenuItem showTestFormToolStripMenuItem;
+        private ToolStripMenuItem exitToolStripMenuItem;
     }
 }

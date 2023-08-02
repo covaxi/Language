@@ -9,6 +9,9 @@ using WinFormsApp1;
 
 namespace WinFormsApp1
 {
+    /// <summary>
+    /// TODO: Move to a separate project/package
+    /// </summary>
     public class Config
     {
         public const string Name = "lang";

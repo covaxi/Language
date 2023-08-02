@@ -9,7 +9,7 @@ namespace WinFormsApp1
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-            await FlagForm.InitializeAsync();
+            await LangForm.InitializeAsync();
         }
 
         private async void button1_Click(object sender, EventArgs e)
@@ -24,7 +24,7 @@ namespace WinFormsApp1
 
         private static async Task ShowForm(string title)
         {
-            using var msg = new FlagForm(title);
+            using var msg = new LangForm(title);
             msg.StartPosition = FormStartPosition.Manual;
             msg.Location = new Point(Screen.PrimaryScreen != null ? (Screen.PrimaryScreen.Bounds.Width - msg.Width) / 2 : 500, 0);
             msg.Show();
@@ -33,8 +33,8 @@ namespace WinFormsApp1
 
         private async void button3_Click(object sender, EventArgs e)
         {
-            await FlagForm.CreateDefaultConfiguration();
-            await FlagForm.InitializeAsync();
+            await LangForm.CreateDefaultConfiguration();
+            await LangForm.InitializeAsync();
         }
     }
 }
