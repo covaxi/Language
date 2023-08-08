@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp1
+﻿namespace Forms
 {
     partial class LangForm
     {

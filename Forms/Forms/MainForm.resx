@@ -117,7 +117,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="taskBarMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="mainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="taskBarIcon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>129, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="taskBarIcon.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAAAIACHAgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAAAFz
+        UkdCAK7OHOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAA7DAAAOwwHHb6hkAAACHElEQVRYR+2WS0hU
+        URzGL61s40YxXIiKgVCbFiKpMSqClkhUCpYSpFA+QI1okUHUohYRCLUoiILKlS5EFGISHWd0bGbUUQbf
+        pmD4GMfJNHXe987nvdcDCro450x4N/ODP5f7weF+53znf84VoDFRA8KZ7B/QsgThsh6a1oniadaJ4mmW
+        ZXIbWlZEXdCqX4MUDpM3PrgN+IMSkq4b0TXoIgof3Aa+fV/Fu/bfKG0eJwof1AaCoTA8PhFevwR/QELx
+        Izt88vPph3mMzf4DbxLUBoxjm4gt6MXFCjPOFRuQesuEjHs/kVltQYyuBxfumJF8wwRdnY2MoIMpgoKG
+        EXUFbj9zwPnHT1Sg5LEdrr8BNLZMo8O4TlQ6mAx87lrBi08LqHzuIMoB3eYNPHk/h0t3hyBKbFkwGVBm
+        n3DNoMZxFEn+6PmyAbxtWyIKPcwG4q8aYJnYIsoBioH08kF87FwmCj3METS1zByLoKN/HVUvJ9QNydoN
+        TAby64ex6xXVFlxzH27CnAdWLDm9qH8zDb3VTVQ6qA0ouccV9UFXa0PKTRPSSgeQLX/4So0NZ3N7kHXf
+        qrZi0cNRMoIOagN78syVVtvYCsC9HUSevBrLLh9qXk/BYN/EjieEXY+oHlYsMEVwlK/yUfzqyyIKm0aI
+        wge3AeUySizpR1uvkyh8cBtQULoiJEZ4HSsz0bKi/4RRA4Lj1w60rIja8H+gsQFgH79Ta55IBiiUAAAA
+        AElFTkSuQmCC
+</value>
+  </data>
 </root>
