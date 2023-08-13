@@ -56,17 +56,16 @@ namespace Forms
             {
                 timer1.Start();
             }
-            e.Handled = true;
         }
 
         private async void ShowDefault(object sender, EventArgs e)
         {
-            await Popup.ShowForm();
+            await Popup.ShowLanguageForm();
         }
 
         private async void ShowUS(object sender, EventArgs e)
         {
-            await Popup.ShowForm("US");
+            await Popup.ShowLanguageForm("US");
         }
 
         private async void CreateDefaultConfiguration(object sender, EventArgs e)
@@ -93,7 +92,7 @@ namespace Forms
         private async void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Stop();
-            await Popup.ShowForm();
+            await Popup.ShowLanguageForm();
         }
     }
 }

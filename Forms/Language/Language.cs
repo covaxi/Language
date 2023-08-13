@@ -31,5 +31,10 @@
             }
             set { throw new NotImplementedException(""); }
         }
+
+        internal static LanguageConfig FromString(string language)
+        {
+            throw new NotImplementedException($"{nameof(FromString)}");
+        }
     }
 }
