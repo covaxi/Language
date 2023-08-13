@@ -11,6 +11,7 @@ namespace Language
     {
         public static async Task ShowForm(string title = "")
         {
+            MainForm.taskBarIcon.Icon = Forms.Language.CurrentLanguage.IconImage;
             await LangForm.InitializeAsync();
             using var msg = new LangForm(title);
             msg.StartPosition = FormStartPosition.Manual;

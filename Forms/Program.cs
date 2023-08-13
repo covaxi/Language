@@ -13,6 +13,8 @@ namespace Forms
             ApplicationConfiguration.Initialize();
             Application.Run(new MainForm());
             //Application.Run(new ApplicationContext());
+
+            // TODO: fix everything later: https://stackoverflow.com/questions/26617159/hook-detect-windows-language-change-even-when-app-not-focused
         }
     }
 }

@@ -15,11 +15,11 @@
             get
             {
                 var cur = CurrentCulture;
-                if (Config.Now.Mappings.TryGetValue(cur, out var lang_str))
+                if (Config.Current.Mappings.TryGetValue(cur, out var lang_str))
                 {
-                    if (Config.Now.Languages.ContainsKey(lang_str))
+                    if (Config.Current.Languages.ContainsKey(lang_str))
                     {
-                        return Config.Now.Languages[lang_str];
+                        return Config.Current.Languages[lang_str];
                     }
                     else
                         throw new IncorrectConfigException($"No language '{lang_str}' ");

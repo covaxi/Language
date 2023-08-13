@@ -29,6 +29,8 @@ namespace Forms
                 Visible = true
             };
 
+            Application.ApplicationExit += Application_ApplicationExit;
+
 
             void Exit(object sender, EventArgs e)
             {
@@ -39,6 +41,10 @@ namespace Forms
             }
         }
 
+        private void Application_ApplicationExit(object? sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
 
         private ToolStripMenuItem showTestFormToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;

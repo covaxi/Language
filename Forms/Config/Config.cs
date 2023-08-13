@@ -26,6 +26,8 @@ namespace Configuration
 
         public static string FileName => Path.Combine(ConfigDirectory, Name, Path.ChangeExtension(Name, ".ini"));
 
+        public static Config Current { get => config; private set => config = value; }
+
         public static readonly Config Default = new()
         {
             Mappings = new Dictionary<string, string>()
@@ -46,13 +48,48 @@ namespace Configuration
             Timestamp = "dd MMM HH:mm:ss.fffff"
         };
 
-        public static Config Now { get; set; } = Default;
 
         public static string ParseDirectory(string text)
         {
             // TODO: Acquire the drop box path from registry
             return text.Replace("%DROPBOX%", Environment.GetEnvironmentVariable("DROPBOX")).Replace("/", "\\");
         }
+
+        public static async Task InitializeAsync()
+        {
+            if (initialized)
+                return;
+
+            config = Config.Default;
+            initialized = false;
+            using var sr = new StreamReader(Config.FileName, false);
+            config = await JsonSerializer.DeserializeAsync<Config>(sr.BaseStream) ?? new();
+            foreach (var lang in config.Languages)
+            {
+                if (!string.IsNullOrWhiteSpace(lang.Value.Flag))
+                    lang.Value.FlagImage = ReadImage(lang.Value.Flag);
+                if (!string.IsNullOrWhiteSpace(lang.Value.Icon))
+                    lang.Value.IconImage = ReadIcon(lang.Value.Icon);
+            }
+            initialized = true;
+        }
+
+        static Image ReadImage(string filePath)
+        {
+            using var fileStream = new FileStream(Config.ParseDirectory(filePath), FileMode.Open,
+                FileAccess.Read, FileShare.Read, 4096, true);
+            return Image.FromStream(fileStream, true);
+        }
+
+        static Icon ReadIcon(string fileName)
+        {
+            using var fileStream = new FileStream(Config.ParseDirectory(fileName), FileMode.Open,
+                FileAccess.Read, FileShare.Read, 4096, true);
+            return new Icon(fileStream);
+        }
+
+        private static bool initialized = false;
+        private static Config config = Default;
     }
 
     public class LanguageConfig
