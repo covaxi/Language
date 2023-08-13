@@ -51,7 +51,7 @@ namespace Configuration
 
         public static string ParseDirectory(string text)
         {
-            // TODO: Acquire the drop box path from registry
+            // TODO: Acquire the drop box path from registry (or get all other environment variables maybe)
             return text.Replace("%DROPBOX%", Environment.GetEnvironmentVariable("DROPBOX")).Replace("/", "\\");
         }
 
