@@ -1,6 +1,6 @@
 using Configuration;
+using Forms.Forms;
 using gma.System.Windows;
-using Language;
 using System.Diagnostics;
 
 namespace Forms

@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Language
+namespace Forms.Forms
 {
     internal class Popup
     {
         public static async Task ShowForm(string title = "")
         {
-            MainForm.taskBarIcon.Icon = Forms.Language.CurrentLanguage.IconImage; // TODO: Move to upper level
+            MainForm.taskBarIcon.Icon = Language.CurrentLanguage.IconImage; // TODO: Move to upper level
             await LangForm.InitializeAsync();
             using var msg = new LangForm(title);
             msg.StartPosition = FormStartPosition.Manual;
