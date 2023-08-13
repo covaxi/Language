@@ -43,7 +43,8 @@ namespace Configuration
                 { "RU", new LanguageConfig { Name = "Русский", Flag = "%DROPBOX%/config/lang/ru.png" , Icon = "%DROPBOX%/config/lang/ru.ico" } },
                 { "HE", new LanguageConfig { Name = "עברית", Flag = "%DROPBOX%/config/lang/il.png" , Icon = "%DROPBOX%/config/lang/il.ico" } },
                 { "US", new LanguageConfig { Name = "Проклятая НАТА", Flag = "%DROPBOX%/config/lang/us.png" , Icon = "%DROPBOX%/config/lang/us.ico" } },
-                { "NOWAY", new LanguageConfig {Name = "Remove me!!!"} } // My windows 11 (or 10 as well) does a shitty thing - it adds af-ZA to the list from time to time, so I have to remove it using the settings
+                // TODO: My windows 11 (or 10 as well) does a shitty thing - it adds af-ZA to the list from time to time, so I have to remove it using the settings
+                { "NOWAY", new LanguageConfig {Name = "Remove me (af-ZA)!!!"} }
             },
             Timestamp = "dd MMM HH:mm:ss.fffff"
         };
