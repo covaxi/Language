@@ -38,10 +38,6 @@ namespace Forms
 
         private void ActHook_KeyUp(object? sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.LMenu && timer1.Enabled)
-            {
-                timer1.Stop();
-            }
         }
 
         private void ActHook_KeyPress(object? sender, KeyPressEventArgs e)
@@ -49,12 +45,14 @@ namespace Forms
             Debug.WriteLine("KeyPress");
         }
 
-        private void ActHook_KeyDown(object? sender, KeyEventArgs e)
+        private async void ActHook_KeyDown(object? sender, KeyEventArgs e)
         {
             Debug.WriteLine($"KeyDown KeyValue:{e.KeyValue} KeyCode:{e.KeyCode} KeyData:{e.KeyData}");
-            if (e.KeyCode == Keys.LMenu && !timer1.Enabled)
+            if (e.KeyCode == Keys.LMenu)
             {
-                timer1.Start();
+                Debug.WriteLine("Timer started");
+                await Task.Delay(1000);
+                await Popup.ShowLanguageForm();
             }
         }
 
@@ -87,12 +85,6 @@ namespace Forms
             Focus();
             Show();
             Activate();
-        }
-
-        private async void timer1_Tick(object sender, EventArgs e)
-        {
-            timer1.Stop();
-            await Popup.ShowLanguageForm();
         }
     }
 }

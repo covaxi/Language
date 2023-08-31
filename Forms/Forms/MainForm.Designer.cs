@@ -38,7 +38,6 @@
             exitToolStripMenuItem = new ToolStripMenuItem();
             taskBarIcon = new NotifyIcon(components);
             lblInfo = new Label();
-            timer1 = new System.Windows.Forms.Timer(components);
             mainMenu.SuspendLayout();
             SuspendLayout();
             // 
@@ -102,17 +101,11 @@
             // lblInfo
             // 
             lblInfo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            lblInfo.AutoSize = true;
             lblInfo.Location = new Point(-426, 55);
             lblInfo.Name = "lblInfo";
-            lblInfo.Size = new Size(812, 15);
+            lblInfo.Size = new Size(812, 48);
             lblInfo.TabIndex = 3;
             lblInfo.Text = "Trying to create an appropriate language indicator with an ability to show current language without lqanding a mousepointer into autohided taskbar part";
-            // 
-            // timer1
-            // 
-            timer1.Interval = 500;
-            timer1.Tick += timer1_Tick;
             // 
             // MainForm
             // 
@@ -129,7 +122,6 @@
             Load += Form1_Load;
             mainMenu.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -141,7 +133,6 @@
         private ToolStripMenuItem showTestFormToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
         private Label lblInfo;
-        private System.Windows.Forms.Timer timer1;
         public static NotifyIcon taskBarIcon;
     }
 }
